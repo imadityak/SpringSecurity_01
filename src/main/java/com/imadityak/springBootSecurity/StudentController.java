@@ -24,6 +24,7 @@ public class StudentController {
         return students;
     }
 
+    //we are making the http stateless so no csrf token required. So don't send csrf token.
     @GetMapping("/csrf")
     public CsrfToken getCsrfToken(HttpServletRequest request){
         return (CsrfToken) request.getAttribute("_csrf");
