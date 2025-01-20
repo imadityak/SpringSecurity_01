@@ -45,14 +45,21 @@ public class SecurityConfig {
 
     //we want multiple username and passwords. We want them to be fetched from the database.
     // when we make this it will not pick the username and password from application.properties file but the object that we are creating is not having any values boi.
-    @Bean
-    public UserDetailsService userDetailsService(){
-        UserDetails user1 = User
-                .withDefaultPasswordEncoder() // depricated don't use it in product encode your password
-                .username("Kiran")
-                .password("kumari")
-                .roles("USER")
-                .build(); // will return obj of userDetails
-        return new InMemoryUserDetailsManager(user1); // this class indirectly implements the userDetailService interface. Why use this class -> easy for obj. creation
-    }
+    //we are hard coding the values here we want it to be fetched from database
+//    @Bean
+//    public UserDetailsService userDetailsService(){
+//        UserDetails user1 = User
+//                .withDefaultPasswordEncoder() // depricated don't use it in product encode your password
+//                .username("Kiran")
+//                .password("kumari")
+//                .roles("USER")
+//                .build(); // will return obj of userDetails
+//        UserDetails user2 = User
+//                .withDefaultPasswordEncoder() // depricated don't use it in product encode your password
+//                .username("aditya")
+//                .password("kumar")
+//                .roles("ADMIN")
+//                .build();
+//        return new InMemoryUserDetailsManager(user1, user2); // this class indirectly implements the userDetailService interface. Why use this class -> easy for obj. creation
+//    }
 }
