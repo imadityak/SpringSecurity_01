@@ -1,4 +1,4 @@
-package com.imadityak.springBootSecurity;
+package com.imadityak.springBootSecurity.model;
 
 //pojo
 public class Student {

@@ -1,4 +1,4 @@
-package com.imadityak.springBootSecurity;
+package com.imadityak.springBootSecurity.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
